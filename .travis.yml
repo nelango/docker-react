@@ -6,4 +6,4 @@ before_install:
     - docker build -t nielango/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run nielango/docker-react npm run test -- --coverage
+    - docker run -e CI=true nielango/docker-react npm run test
